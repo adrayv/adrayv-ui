@@ -1,14 +1,4 @@
-import React from 'react';
-import styled from 'styled-components'
+import BasicText from './components/basictext'
+import BasicColors from './misc/basiccolor'
 
-const Block = styled.div`
-	background: red;
-`
-
-const MyComponent = () => (
-	<Block>
-    	<p>Hello {'adrayv-ui'}!</p>
-	</Block>
-);
-
-export default MyComponent;
+export {BasicColors, BasicText}
