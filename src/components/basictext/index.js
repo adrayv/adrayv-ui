@@ -115,7 +115,7 @@ const link = css`
 	color: ${colors.blue};
 `
 
-const Txt = styled.p`
+const Txt = styled.span`
 	@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 	font-family: 'Karla', serif;
 	margin: 0;
