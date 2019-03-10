@@ -10,6 +10,10 @@ const Layout = styled.div`
 	}
 `
 
+const Div = styled.div`
+	width: 400px;
+`
+
 const App = () => (
 	<Layout>
 		<BasicText xs>xs</BasicText>
@@ -21,6 +25,13 @@ const App = () => (
 		<BasicText xl3>xl3</BasicText>
 		<BasicText bold color='blue'>Bold Blue</BasicText>
 		<BasicText bold color='grayD'>Bold GrayD</BasicText>
+		<Div>
+		<BasicText xs>Here is a long ass sentence dbkjb sldjfsld
+		fs
+		 dfsopdfsidfisjdfsdjfksjbdfkjbsdkjfbsdfs jdfljsdoi fjosidjfo ijsdoifj oisdj foijsoid fois jdoif os dof sod jfoij soidj fiosjoidfj ois jdoifj soidj foi soidfjsd
+		 jfs
+		 difosdhfois dfoi sjd</BasicText>
+		</Div>
 	</Layout>
 );
 

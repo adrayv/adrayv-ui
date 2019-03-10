@@ -178,6 +178,19 @@ const Txt = styled.span`
 
 const TextContainer = styled.div`
 	width: fit-content;
+	${ props => props.lineHeight && props.lineHeight === 'comfortable' && lineHeightComfortable}
+	${ props => props.lineHeight && props.lineHeight === 'compact' && lineHeightCompact}
+	${ props => 
+		props.xs ? xs :
+		props.sm ? sm : 
+		props.md ? md :
+		props.lg ? lg :
+		props.xl ? xl :
+		props.xxl ? xxl :
+		props.xl3 ? xl3 :
+		props.xl4 ? xl4 :
+		md
+	}
 `
 
 const Link = styled.a`
@@ -188,7 +201,7 @@ export default class Text extends React.PureComponent {
 	render() {
 		if(this.props.link && typeof this.props.link === 'string') {
 			return(
-				<TextContainer className='textContainer'>
+				<TextContainer {...this.props} className='textContainer'>
 					<Link target='_blank' onClick={(e) => e.stopPropagation()} href={this.props.link}>
 						<Txt {...this.props}>
 							{this.props.children}
@@ -198,7 +211,7 @@ export default class Text extends React.PureComponent {
 			)
 		}
 		return(
-			<TextContainer className='textContainer'>
+			<TextContainer {...this.props} className='textContainer'>
 				<Txt {...this.props}>
 					{this.props.children}
 				</Txt>
